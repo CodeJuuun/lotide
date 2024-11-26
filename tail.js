@@ -22,9 +22,6 @@ const assertEqual = function(actual, expected) {
 // }
 
 const tail = function(tailEndArr) {
-  if (tailEndArr.length <= 1) {
-    return [];
-  }
   return tailEndArr.slice(1);
 };
 
