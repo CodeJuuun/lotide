@@ -15,7 +15,7 @@ let eqArrays = (arr1, arr2) => {
   // add a loop to further check if each elements in the array match
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
-      return false
+      return false;
     }
   }
 
@@ -45,7 +45,7 @@ assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
 
 // Empty arrays
-assertEqual(eqArrays([], []), true) // should output false
+assertEqual(eqArrays([], []), true); // should output false
 
 // Both arrays have different length
 assertEqual(eqArrays([1, 2, 3, 4, 5], [1, 2, 3]), false);
