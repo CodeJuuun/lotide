@@ -17,10 +17,11 @@ const result = tail(['Hello', 'World', 'Labs']);
 assertEqual(result.length, 2);
 
 //checks if array only has one element
-const oneElement = ['Hello'];
-assertEqual(oneElement.length, 1);
+const oneElement = tail(['Hello']);
+console.log(oneElement)
+assertEqual(oneElement.length, 0);
 
 
 // checks if array is empty
-const emptyArr = [];
+const emptyArr = tail([]);
 assertEqual(emptyArr.length, 0);
