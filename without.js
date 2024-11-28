@@ -37,6 +37,7 @@ let without = function(source, itemsToRemove) {
 //          set the boolean variable here within nested loop so we can compare each item from the source to the items in itemsToRemove and set addToList to false if the item is in the itemsToRemove list.
         addtoList = false;
         console.log("Found a match excluding item");
+        break;
       }
     }
 
