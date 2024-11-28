@@ -49,21 +49,21 @@ let without = function(source, itemsToRemove) {
   return itemsToKeep;
 };
 
-console.log(without([1, 2, 3], [1])); // => should return [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => should return ["1", "2"]
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => should return [2, 3]
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => should return ["1", "2"]
 
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-console.log(without([1, 2, 3], [1])); //should return [2, 3]
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); //should return [2, 3]
 
 // if source array is empty
-console.log(without([], [1, 2, 3])); // should return []
+assertArraysEqual(without([], [1, 2, 3]), []); // should return []
 
 // if itemsToRemove is empty
-console.log(without([1, 2, 3], [])); // should return untouched source array
+assertArraysEqual(without([1, 2, 3], []), [1, 2, 3] ); // should return untouched source array
 
 // if all items match
-console.log(without([1, 2, 3], [1, 2, 3])); // should return []
+assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []); // should return []
