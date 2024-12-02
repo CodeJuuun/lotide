@@ -22,4 +22,15 @@ const countLetters = (sentence) => {
   return results;
 };
 
-countLetters("Coding is cool");
+const result = countLetters("Coding is cool");
+
+//since I am comparing objects, need to separate checks into each letter to be more concise
+assertEqual(result["C"], 1);
+assertEqual(result["o"], 3);
+assertEqual(result["d"], 1);
+assertEqual(result["i"], 2);
+assertEqual(result["n"], 1);
+assertEqual(result["g"], 1);
+assertEqual(result["s"], 1);
+assertEqual(result["c"], 1);
+assertEqual(result["l"], 1);
