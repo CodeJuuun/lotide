@@ -3,7 +3,7 @@
 // return an array that stores the index positions of letter occurance
 
 const letterPositions = (sentence) => {
-  let results = {};
+  const results = {};
 
   for (let i = 0; i < sentence.length; i++) { //loop
     const char = sentence[i];
@@ -40,9 +40,11 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-assertArraysEqual(letterPositions("hello").h, [0]);
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2, 3]);
-assertArraysEqual(letterPositions("hello").o, [4]);
+
+const result = letterPositions("hello");
+assertArraysEqual(result.h, [0]);
+assertArraysEqual(result.e, [1]);
+assertArraysEqual(result.l, [2, 3]);
+assertArraysEqual(result.o, [4]);
 
 console.log(letterPositions('Hello'));
