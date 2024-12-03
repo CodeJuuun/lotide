@@ -23,6 +23,7 @@ const countLetters = (sentence) => {
 };
 
 const result = countLetters("Coding is cool");
+console.log(countLetters("lighthouse in the house"));
 
 //since I am comparing objects, need to separate checks into each letter to be more concise
 assertEqual(result["C"], 1);
