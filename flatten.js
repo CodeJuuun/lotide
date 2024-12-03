@@ -38,10 +38,11 @@ const flatten = function(arrWithNestedArr) {
   return flattenedArr;
 };
 
-// console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]); // => [1, 2, 3, 4, 5, 6]
 
 // if there are empty arrays
-console.log(flatten([[]])); // should return []
+assertArraysEqual(flatten([[]]), []); // should return []
 
 // if there are different data types
-console.log(flatten(['hello', 'world', [1, 2, true], 'javascript'])); // should return [ 'hello', 'world', 1, 2, 3, 'javascript' ]
+assertArraysEqual(flatten(['hello', 'world', [1, 2, true], 'javascript']), ['hello', 'world', [1, 2, true], 'javascript']); // ['hello', 'world', [1, 2, true], 'javascript']
+
