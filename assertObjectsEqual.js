@@ -8,7 +8,7 @@ const eqObjects = function(obj1, obj2) {
   }
 
   for (let key of obj1keys) {
-    if (Array.isArray(obj1[key]) && (Array.isArray(obj2[key]))) { // if both conditions pass and returns true and both evaluate to arrays---
+    if (Array.isArray(obj1[key]) && (Array.isArray(obj2[key]))) { // if both values are arrays
       if (!eqArrays(obj1[key], obj2[key])) { // use function to check the comparison of both object's key values if they are not matching
         return false;
       }
@@ -25,7 +25,7 @@ const eqArrays = (arr1, arr2) => {
   }
 
 
-  // add a loop to further check if each elements in the array match
+  // "use a loop to compare each element in the arrays"
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
@@ -39,21 +39,34 @@ const eqArrays = (arr1, arr2) => {
 
 const assertObjectsEqual = (actual, expected) => {
   const inspect = require("util").inspect;
-  console.log(`Example label: ${inspect(actual)}`);
   if (eqObjects(actual, expected)) {
     console.log(`✅✅ Assertion passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
     console.log(`❌❌ Assertion failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
-}
+};
 
 const obj1 = {
   a: 1,
   b: 2
-}
+};
 const obj2 = {
   b: 2,
   a: 1,
-}
+};
 
-assertObjectsEqual(obj1, obj2)
+const person1 = {
+  name: 'John',
+  age: 28,
+  job: 'Web Developer'
+};
+
+const person2 = {
+  name: 'Clara',
+  age: 29,
+  job: 'Web Developer'
+};
+
+// test case
+assertObjectsEqual(obj1, obj2);
+assertObjectsEqual(person1, person2);
