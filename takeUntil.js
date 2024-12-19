@@ -20,7 +20,6 @@ let eqArrays = (arr1, arr2) => {
     return false;
   }
 
-
   // add a loop to further check if each elements in the array match
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
@@ -53,4 +52,5 @@ console.log(result2);
 
 
 assertArraysEqual(takeUntil(data1, (num) => num < 0), [1, 2, 5, 7]);
-assertArraysEqual(takeUntil(data2, (element) => element.length > 6), ['husky', 'corgi', 'boxer']);
+
+assertArraysEqual(result2, ['husky', 'corgi', 'boxer']);
