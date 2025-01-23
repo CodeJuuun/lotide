@@ -67,3 +67,5 @@ assertArraysEqual(without([1, 2, 3], []), [1, 2, 3] ); // should return untouche
 
 // if all items match
 assertArraysEqual(without([1, 2, 3], [1, 2, 3]), []); // should return []
+
+module.exports = without;

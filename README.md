@@ -19,27 +19,39 @@ This project was created and published by me as part of my learnings at Lighthou
 `const _ = require('@codefloww/lotide');`
 
 **Call it:**
-
+make note on how to test it
 `const results = _.tail([1, 2, 3]) // => [2, 3]`
 
 ## Documentation
 
 The following functions are currently implemented:
 
--`head()`: returns the first element of the array            
--`tail()`: returns all elements of the array except the first element
--`middle()`: returns the middle element or elements of the array
--`assertArraysEqual()`: compares two arrays to see if they are equal in length
--`assertEqual()`: checks if the actual value with what you expected it should be       
--`assertObjectsEqual()`: compares two objects to see if they are equal in nature 
--`countLetters()`: returns an object with the total amount of each letter is in the string      
--`countOnly()`: returns an object with the count of an item in the arrat
--`eqArrays()`: compares two arrays to check if they are exactly equal
--`eqObjects()`: compares two objects and returns true if they are equal
--`findKey()`: returns the first key that fulfils the condition set by the callback
--`findKeyByValue()`: returns the key in an object that matches the value that coorespond to it
--`flatten()`: combines array with another array to create a single array
--`letterPositions()`: returns the position of each letter in a provided string
--`map()`: returns a new array that match the same length as the original and apply whatever is done in the callback function        
--`takeUntil()`: returns a new array with elements from the original into the callback function returns true
--`without()`: returns a new array excluding the specified items
+- `assertArraysEqual(array1, array2)`: This function compares two arrays to check if they are equal in length and element and returns true or false
+- `assertEqual(actual, expected)`: checks if the actual value matches expected value.
+- `assertObjectsEqual(obj1, obj2)`: compares two objects to see if they are equal in nature and returns true or false
+- `countLetters(string)`: returns an object where the key is a letter and the value is the count
+- `countOnly(array, itemsToCount)`: returns an specific items in an array and returns the count of an item in an object
+- `eqArrays(arr1, arr2)`: compares two arrays to check if they are exactly equal. Returns true or false
+- `eqObjects(obj1, obj2)`: compares two objects and returns true if they are equal
+- `findKey(obj1, callback)`: returns the first key that fulfils the condition set by the callback
+- `findKeyByValue(obj, value)`: returns the key in an object that matches the value that coorespond to it
+- `flatten(array)`: combines array with another array to create a single array. Returns a single flattened array
+- `head(array)`: returns the first element of the array            
+- `letterPositions(string)`: returns the position of each letter in a provided string. Each key being a letter and value being an array of indices
+- `map(arr, callback)`: returns a new array that match the same length as the original and apply whatever is done in the callback function        
+- `middle(array)`: returns the middle element or elements of the array as a new array
+- `tail(array)`: returns all elements of the array except the first element
+- `takeUntil(arr, callback)`: returns a new array with elements from the original into the callback function returns true
+- `without(arr, itemsToRemove)`: returns a new array excluding the specified items
+
+
+
+- import require functions in all files instead of redeclaring 
+- export all functions
+- import all functions into index.js
+- README make note on what argument it'll take in
+- npm test to ensure tests pass
+- commit approiately present
+- update version of lotide package via package.json
+- push to github
+- run npm update to update node package 

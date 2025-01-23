@@ -3,7 +3,6 @@ let eqArrays = (arr1, arr2) => {
     return false;
   }
 
-
   // add a loop to further check if each elements in the array match
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {

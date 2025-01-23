@@ -54,3 +54,5 @@ console.log(result2);
 assertArraysEqual(takeUntil(data1, (num) => num < 0), [1, 2, 5, 7]);
 
 assertArraysEqual(result2, ['husky', 'corgi', 'boxer']);
+
+module.exports = takeUntil;

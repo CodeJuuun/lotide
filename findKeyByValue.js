@@ -1,23 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😀😀😀 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🤢🤢🤢 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire",
-  fantasy: "The Witcher",
-  animated: "Arcane",
-  basedOnBook: "The Queen's Gambit"
-};
-
-
 // returns first key that contains a given value, if no key is given, return undefined.
-const findKeyByValue = (obj, val) => {
+const findKeyByValue = function (obj, val) {
   const objKeys = Object.keys(obj);
   for (let key of objKeys) {
     if (obj[key] === val) { // if the VALUE matches the given value, return the key...THE KEYY not the array of elements
@@ -26,16 +8,27 @@ const findKeyByValue = (obj, val) => {
   }
   return undefined;
 };
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama: "The Wire",
+//   fantasy: "The Witcher",
+//   animated: "Arcane",
+//   basedOnBook: "The Queen's Gambit"
+// };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 
-// case sensitivity
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The witcher"), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
-// value doesn't exist
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Wednesday"), undefined);
+// // case sensitivity
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The witcher"), undefined);
 
-// partially missing matches
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Queen's"), undefined);
+// // value doesn't exist
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "Wednesday"), undefined);
+
+// // partially missing matches
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Queen's"), undefined);
+
+module.exports = findKeyByValue;

@@ -40,18 +40,20 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 
-// test cases
+// // test cases
 
-// length of element in array
-const results2 = map(words, (word) => word.length);
-assertArraysEqual(results2, [6, 7, 2, 5, 3]);
+// // length of element in array
+// const results2 = map(words, (word) => word.length);
+// assertArraysEqual(results2, [6, 7, 2, 5, 3]);
 
 
-// Change to all capital
-const results3 = map(words, (word) => word.toUpperCase());
-assertArraysEqual(results3, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
+// // Change to all capital
+// const results3 = map(words, (word) => word.toUpperCase());
+// assertArraysEqual(results3, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
 
-// joining the words in the array
-const results4 = map(words, (word) => word.toUpperCase()).join(" "); // method chaining
-// console.log(results4) // testing to what output comes out
-assertArraysEqual([results4], ["GROUND CONTROL TO MAJOR TOM"]);
+// // joining the words in the array
+// const results4 = map(words, (word) => word.toUpperCase()).join(" "); // method chaining
+// // console.log(results4) // testing to what output comes out
+// assertArraysEqual([results4], ["GROUND CONTROL TO MAJOR TOM"]);
+
+module.exports = map;
