@@ -1,0 +1,26 @@
+{
+  "name": "@codefloww/lotide",
+  "version": "1.0.3",
+  "description": "lotide function library",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^4.3.1",
+    "mocha": "^9.2.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeJuuun/lotide.git"
+  },
+  "author": "codefloww (https://github.com/CodeJuuun)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeJuuun/lotide/issues"
+  },
+  "homepage": "https://github.com/CodeJuuun/lotide#readme"
+}
