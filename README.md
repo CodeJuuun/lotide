@@ -19,7 +19,7 @@ This project was created and published by me as part of my learnings at Lighthou
 `const _ = require('@codefloww/lotide');`
 
 **Call it:**
-make note on how to test it
+
 `const results = _.tail([1, 2, 3]) // => [2, 3]`
 
 ## Documentation
@@ -43,15 +43,3 @@ The following functions are currently implemented:
 - `tail(array)`: returns all elements of the array except the first element
 - `takeUntil(arr, callback)`: returns a new array with elements from the original into the callback function returns true
 - `without(arr, itemsToRemove)`: returns a new array excluding the specified items
-
-
-
-- import require functions in all files instead of redeclaring 
-- export all functions
-- import all functions into index.js
-- README make note on what argument it'll take in
-- npm test to ensure tests pass
-- commit approiately present
-- update version of lotide package via package.json
-- push to github
-- run npm update to update node package 
