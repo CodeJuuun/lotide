@@ -1,6 +1,3 @@
-// length of array will be differet, indexes are not, so use index to determine if element is in middle?
-// if array has only one or two elements, return empty array
-// check if length of array is even or odd then use Math.round (- 1 if length is even)
 const middle = function(arr) {
   let middleElements = [];
   if (arr.length < 3) {

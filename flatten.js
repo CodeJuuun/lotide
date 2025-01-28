@@ -13,12 +13,5 @@ const flatten = function(arrWithNestedArr) {
   return flattenedArr;
 };
 
-// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]); // => [1, 2, 3, 4, 5, 6]
 
-// // if there are empty arrays
-// assertArraysEqual(flatten([[]]), []); // should return []
-
-// // if there are different data types
-// assertArraysEqual(flatten(['hello', 'world', [1, 2, true], 'javascript']), ['hello', 'world', [1, 2, true], 'javascript']); // ['hello', 'world', [1, 2, true], 'javascript']
-
-module.export = flatten;
+module.exports = flatten;

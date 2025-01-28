@@ -10,17 +10,7 @@ let eqArrays = (arr1, arr2) => {
     }
   }
 
-  // if it passes all conditional checks
   return true;
 };
-
-
-// test cases
-// both arrays contain different data types
-// both arrays contain different numbers
-// Each array has different lengths
-// both arrays are empty? Or one is empty
-
-//----------------------------------------------------------------
 
 module.exports = eqArrays;
